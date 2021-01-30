@@ -1,0 +1,37 @@
+<a routerLink="./add" routerLinkActive="active">
+  <img src="assets/add1.png" class="icon" />
+</a>
+<a routerLink="./list" routerLinkActive="active">
+  <img src="assets/refresh.png" class="icon" />
+</a>
+<h4 class="text-center">Liste de participants</h4>
+<table class="table table-striped">
+
+
+    <tbody *ngFor="let participantlists of participantlist">
+    <tr>
+      <th scope="row">{{participantlists.id}}</th>
+      <td>{{participantlists.nom}}</td>
+      <td>{{participantlists.prenom}}</td>
+      <td>{{participantlists.email}}</td>
+      <td>{{participantlists.adresse}}</td>
+      <td>{{participantlists.societe}}</td>
+      <td>{{participantlists.poste}}</td>
+      <td>
+
+        <a routerLink="./edit/{{participantlists.id}}" routerLinkActive="active">
+          <img src="assets/edit1.png" class="icon" />
+        </a>
+      </td>
+       <td>
+
+         <img src="assets/delete1.png" class="icon" (click)="onDelete(participantlists.id)" alt="delete"></td>
+
+
+    </tr>
+
+    </tbody>
+
+</table>
+
+

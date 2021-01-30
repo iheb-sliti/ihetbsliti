@@ -1,0 +1,35 @@
+<header>
+  <h2>Ajouter un participant</h2>
+</header>
+<form #sessionItemForm="ngForm" (ngSubmit)="addParticipant(sessionItemForm.value)">
+  <ul>
+    <li>
+      <label for="nom">Nom</label>
+      <input type="text" name="nom" id="nom" ngModel required>
+    </li>
+    <li>
+      <label for="prenom">Prenom</label>
+      <input type="text" name="prenom" id="prenom" ngModel required>
+    </li>
+    <li>
+      <label for=" adresse ">Adresse</label>
+      <input type="text" name="adresse" id=" adresse " ngModel required>
+    </li>
+    <li>
+      <label for=" email ">Email</label>
+      <input type="text" name="email" id=" email " ngModel required>
+    </li>
+    <li>
+      <label for=" société ">Société</label>
+      <input type="text" name="société" id=" société " ngModel required>
+    </li>
+    <li>
+      <label for=" poste ">Poste</label>
+      <input type="text" name="poste" id=" poste " ngModel required>
+    </li>
+
+
+
+  </ul>
+  <button type="submit" [disabled]="!sessionItemForm.form.valid">Enregistrer</button>
+</form>
